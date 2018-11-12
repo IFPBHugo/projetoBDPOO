@@ -2,10 +2,14 @@
 
 import java.util.Set;
 
+import javax.persistence.OneToMany;
+
 public class Professor {
 
 	private Long id;
 	private String nome;
+	
+	@OneToMany(mappedBy="professor")
 	private Set<Turma> turmas;
 	
 	

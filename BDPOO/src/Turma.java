@@ -2,6 +2,8 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +14,8 @@ public class Turma {
 	@Column(name="id_turma")
 	private Long id;
 	
+	@ManyToOne
+	@JoinColumn(name="id_professor")
 	private Professor professor;
 	private Disciplina disciplina;
 	private Set<Aluno> alunos;
