@@ -2,10 +2,14 @@
 
 import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+@Entity
 public class Professor {
 
+	@Id
 	private Long id;
 	private String nome;
 	
@@ -48,5 +52,12 @@ public class Professor {
 			return false;
 		return true;
 	}
+	public Set<Turma> getTurmas() {
+		return turmas;
+	}
+	public void setTurmas(Set<Turma> turmas) {
+		this.turmas = turmas;
+	}
+	
 	
 }
