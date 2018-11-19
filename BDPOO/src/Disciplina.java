@@ -1,7 +1,10 @@
-
+import javax.persistence.Column;
+import javax.persistence.Id;
 
 public class Disciplina {
 
+	@Id
+	@Column(name="id_disciplina")
 	private Long id;
 	private String nome;
 	
