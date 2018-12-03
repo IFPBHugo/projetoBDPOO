@@ -3,7 +3,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Disciplina {
+public class Disciplina implements Identificavel {
 
 	@Id
 	@Column(name="id_disciplina")

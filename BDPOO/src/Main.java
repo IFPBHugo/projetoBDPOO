@@ -5,16 +5,17 @@ import javax.persistence.Persistence;
 public class Main {
 
 	public static void main(String[] args) {
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("academico");
-		EntityManager em = factory.createEntityManager();
-		em.getTransaction().begin();
+		DAO<Professor> dao = new DAO<Professor>();
 		Professor p = new Professor();
-		p.setId(1l);
-		p.setNome("Hugo");
-		em.persist(p);
-		em.getTransaction().commit();
-		em.close();
-		factory.close();
+		p.setId(22l);
+		p.setNome("HugoFF");
+		dao.save(p);
+		Professor p2 = new Professor();
+		p2.setId(23l);
+		p2.setNome("Hugo");
+		dao.save(p2);
+		Professor find = dao.find(Professor.class, 22l);
+		System.out.println(find.getNome());
 	}
 	
 }

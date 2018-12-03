@@ -2,7 +2,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Aluno {
+public class Aluno implements Identificavel {
 
 	@Id
 	private Long id;

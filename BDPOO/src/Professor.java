@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Professor {
+public class Professor implements Identificavel{
 
 	@Id
 	private Long id;

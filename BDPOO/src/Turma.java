@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tabela_turma")
-public class Turma {
+public class Turma implements Identificavel{
 
 	@Id
 	@Column(name = "id_turma")
