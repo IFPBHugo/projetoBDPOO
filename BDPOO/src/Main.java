@@ -1,18 +1,18 @@
-import java.util.ArrayList;
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-
 public class Main {
 
 	public static void main(String[] args) {
-		Academico a = new Academico();
-		try {
-			a.cadastrarALuno(null, null, null);
-		} catch (CPFInvalidoException e) {
-			e.printStackTrace();
-		}
+		Aluno a = new Aluno();
+		a.setId(1l);
+		a.setNome("Fulano");
+		DAO<Aluno> d = new DAO<Aluno>();
+		d.save(a);
+		
+//		Academico a = new Academico();
+//		try {
+//			a.cadastrarALuno(null, null, null);
+//		} catch (CPFInvalidoException e) {
+//			e.printStackTrace();
+//		}
 //		DAO<Professor> dao = new DAO<Professor>();
 //		Professor p = new Professor();
 //		p.setId(26l);

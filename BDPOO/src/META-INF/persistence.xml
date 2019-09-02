@@ -5,12 +5,12 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
    http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 
-	<persistence-unit name="academico" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="salao" transaction-type="RESOURCE_LOCAL">
 		<properties>
 			<!--  Propriedades da conexão com o Banco de Dados -->
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/academico" />
-			<property name="javax.persistence.jdbc.user" value="postgres" />
-			<property name="javax.persistence.jdbc.password" value="oradb2010pgsql" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.4.170:5432/meubanco" />
+			<property name="javax.persistence.jdbc.user" value="poobd" />
+			<property name="javax.persistence.jdbc.password" value="poobd" />
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 
 			<!-- Propriedades específicas do Hibernate -->
@@ -19,7 +19,7 @@
 			<property name="hibernate.format_sql" value="true" />
 
 			<!-- Cria/Atualiza o esquema relacional no SGBD -->
-			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 		</properties>
 
 	</persistence-unit>
