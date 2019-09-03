@@ -3,7 +3,7 @@ public class Academico implements AcademicoIF {
 
 	@Override
 	public Aluno cadastrarALuno(String matricula, String cpf, String nome) throws CPFInvalidoException {
-		Aluno aluno = new Aluno();
+		Aluno aluno3 = new Aluno();
 		if(cpf == null || cpf.isEmpty()) {
 			throw new CPFInvalidoException();
 		}
